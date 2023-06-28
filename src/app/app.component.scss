@@ -1,0 +1,62 @@
+// .example-spacer {
+//   flex: 1 1 auto;
+// }
+
+header {
+  background-color: #1976d2;
+  color: white;
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+
+  & h1 {
+    padding: 0 40px;
+  }
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  padding-bottom: 64px;
+}
+
+footer {
+  background-color: #1976d2;
+  color: white;
+
+  clear: both;
+  position: relative;
+  height: 64px;
+  margin-top: -64px;
+
+  & p {
+    margin: 0;
+    text-align: end;
+    padding: 20px;
+  }
+
+  & button {
+    margin: 5px;
+  }
+}
+
+#logo {
+  flex: 1 1 auto;
+}
+
+#page-wrapper {
+  min-height: 100vh;
+}
+
+nav {
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  & span {
+    margin: 0 30px;
+    padding: 17px 17px;
+    cursor: pointer;
+  }
+}

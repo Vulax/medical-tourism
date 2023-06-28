@@ -1,0 +1,138 @@
+<div id="map-page-wrapper">
+  <div id="map-left-side">
+    <!-- <p>pick a clinic and a residence by clicking on the map</p> -->
+    <div id="map-controls">
+      <div id="map-checkboxes">
+        <mat-checkbox
+          class="app-checkbox"
+          [color]="'primary'"
+          (change)="mapFilterChanged()"
+          [(ngModel)]="isMedicalShown"
+          >Show Medical</mat-checkbox
+        >
+
+        <mat-checkbox
+          class="app-checkbox"
+          [color]="'primary'"
+          (change)="mapFilterChanged()"
+          [(ngModel)]="isResidentialShown"
+          >Show Residential</mat-checkbox
+        >
+      </div>
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <mat-select [value]="'Herceg Novi'" disabled>
+          <mat-option [value]="'Herceg Novi'"> Herceg Novi </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select
+          [(value)]="selectedCategory"
+          (selectionChange)="filterMarkers(selectedCategory)"
+        >
+          <mat-option
+            *ngFor="let category of categories"
+            [value]="category.name"
+          >
+            {{ category.name | titlecase }} ({{ category.count }})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- <p>Chosen Clinic: {{ selectedMedicalMarker?.info }}</p> -->
+      <!-- <p>Chosen Residence: {{ selectedResidentialMarker?.info }}</p> -->
+
+      <mat-form-field appearance="fill">
+        <mat-label>Choose travel date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="MM/DD/YYYY" />
+          <input matEndDate placeholder="MM/DD/YYYY" />
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+
+    <div id="listed-markers">
+      <mat-tab-group
+        mat-stretch-tabs="true"
+        mat-align-tabs="center"
+        animationDuration="0ms"
+      >
+        <mat-tab label="Medical">
+          <ul>
+            <li
+              class="listed-markers-clickable"
+              (click)="openInfo(marker)"
+              *ngFor="
+                let marker of filterMarkersByType('medical');
+                trackBy: trackByFn
+              "
+            >
+              <span>{{ marker.title }}</span>
+            </li>
+          </ul>
+        </mat-tab>
+        <mat-tab label="Residential"
+          ><ul>
+            <li
+              class="listed-markers-clickable"
+              (click)="openInfo(marker)"
+              *ngFor="
+                let marker of filterMarkersByType('residential');
+                trackBy: trackByFn
+              "
+            >
+              <span>{{ marker.title }}</span>
+            </li>
+          </ul></mat-tab
+        >
+      </mat-tab-group>
+    </div>
+
+    <div id="selected-markers">
+      <p>
+        Selected Clinic:
+        <u>{{ selectedMedicalMarker?.title }}</u>
+      </p>
+      <p>
+        Selected Residence:
+        <u>{{ selectedResidentialMarker?.title }}</u>
+      </p>
+    </div>
+  </div>
+
+  <div id="map-wrapper" *ngIf="apiLoaded | async">
+    <google-map
+      height="100%"
+      width="100%"
+      [zoom]="zoom"
+      [center]="center"
+      [options]="options"
+      (mapClick)="click($event)"
+    >
+      <map-marker
+        #somemarker="mapMarker"
+        *ngFor="let marker of markers"
+        [position]="marker.position"
+        [label]="marker.label"
+        [title]="marker.title"
+        [options]="marker.options"
+        (mapClick)="openInfo(marker, somemarker)"
+      >
+      </map-marker>
+      <map-info-window>
+        <h1>{{ selectedMarker?.title }}</h1>
+        <p>Category: {{ selectedMarker?.category }}</p>
+        <p>Email: {{ selectedMarker?.email }}</p>
+        <p>Phone: {{ selectedMarker?.phone }}</p>
+        <p>Address: {{ selectedMarker?.address }}</p>
+
+        <p>{{ selectedMarker?.description }}</p>
+
+        <a routerLink="/details/{{ selectedMarker?.id }}">Details</a>
+      </map-info-window>
+    </google-map>
+  </div>
+</div>

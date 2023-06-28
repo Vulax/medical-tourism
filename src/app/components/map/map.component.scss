@@ -1,0 +1,58 @@
+#map-page-wrapper {
+  display: flex;
+}
+
+#map-left-side {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 0px;
+  padding: 20px 20px;
+  justify-content: space-around;
+}
+
+#map-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+#listed-markers {
+  min-height: 250px;
+}
+
+#map-wrapper {
+  flex: 3 1 auto;
+}
+
+.clinic-marker-label {
+  color: black;
+}
+
+google-map {
+  height: calc(100vh - 128px);
+  display: block;
+}
+
+#map-checkboxes {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  & .app-checkbox {
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.listed-markers-clickable {
+  cursor: pointer;
+  & span {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
