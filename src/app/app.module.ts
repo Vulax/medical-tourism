@@ -13,27 +13,31 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { HomeComponent } from './components/home/home.component';
 import { MapComponent } from './components/map/map.component';
 import { DetailsComponent } from './components/details/details.component';
-import { BlogComponent } from './components/blog/blog.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { CardSmallComponent } from './components/card-small/card-small.component';
 import { MatCardModule } from '@angular/material/card';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BookingPopupComponent } from './components/booking-popup/booking-popup.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     MapComponent,
     DetailsComponent,
-    BlogComponent,
-    CardSmallComponent,
+    NavigationComponent,
+    HeaderComponent,
+    BookingPopupComponent,
+    FooterComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
