@@ -1,0 +1,15 @@
+[
+  {
+    "id": "agency-1",
+    "deals": {
+      "name": "Specijalna ponuda za EX-YU građane",
+      "description": "Smeštaj na bazi punog pansiona u dvokrevetnoj sobi. Lekarski pregled na dolasku. Do 5 terapija dnevno (2 individualne, 2 grupne i 1 elektro). Terapije se sprovode svakim danom osim nedeljom. Korišćenje sportskog bazena i teretane – GRATIS."
+    },
+    "position": { "lat": 42.45860018719966, "lng": 18.51358283635801 },
+    "name": "Institut za fizikalnu medicine, rehabilitaciju I reumatologiju",
+    "address": "Savа Ilića 5, Igalo, Crna Gora",
+    "email": "marketing@igalospa.com",
+    "phone": "+382 63 211 314",
+    "website": "https://igalospa.com"
+  }
+]

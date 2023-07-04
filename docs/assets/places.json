@@ -1,0 +1,28 @@
+[
+  {
+    "id": "place-1",
+    "name": "Hotel Perla",
+    "type": "residential",
+    "price": "237€",
+    "rating": "9.2",
+    "position": { "lat": 42.45015515804143, "lng": 18.55273324802603 },
+    "description": "Hotel Perla se nalazi na Savini, najljepšem dijelu Herceg Novog. Hotel je smješten na samoj obali uz šetalište, posjeduje svoju plažu i zajedno sa aneksima i kompletnim okruženjem, čini jedno malo naselje - resort.",
+    "address": "98 Pet Danica Walkway",
+    "phone": "+382 31 345 070",
+    "email": "hotel@perla.me",
+    "category": "residence"
+  },
+  {
+    "id": "place-2",
+    "name": "Boutique Hotel Kredo",
+    "type": "residential",
+    "price": "233€",
+    "rating": "9.2",
+    "position": { "lat": 42.453324658515214, "lng": 18.558430159708713 },
+    "description": "Boutique Hotel Kredo je naš novi hotel i nalazi se na idealnoj lokaciji, uz samu obalu sa prelijepim pogledom na Bokokotorski zaliv. Ispred hotela je Šetalište 5 Danica koje se prostire 7km uz more, duž kojeg se nalaze restorani, kafići kao i veliki broj plaža koje mogu zadovoljiti svačiji ukus.  Na 100m udaljenosti se nalazi Manastir Savina (XI - XVIII vijek), koji je jedan od najljepših primjera arhitekture baroka na Jadranu. Hotel posjeduje luksuzne sobe i apartmane, restoran, cafe bar, pool bar, kutak za djecu, otvoreni bazen sa hidromasažom.",
+    "address": "Brace Grakalica, 79 Marina",
+    "phone": "+382 31 338 111",
+    "email": "info@hotelkredo.me",
+    "category": "residence"
+  }
+]
