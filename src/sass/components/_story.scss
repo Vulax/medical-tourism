@@ -50,7 +50,8 @@
 
     &__text {
         transform: skewX(12deg);
-
+        backface-visibility: hidden;
+        
         @include respond(phone) {
             transform: skewX(0);
         }
