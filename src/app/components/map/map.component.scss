@@ -56,3 +56,122 @@ ul {
     border-bottom: 1px solid #ccc;
   }
 }
+
+.map-info-window-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+
+.info-container-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info-container-header .head-image-small {
+  width: 250px;
+  height: 250px;
+  border-top-left-radius: 15px;
+  object-fit: cover;
+  margin-right: 25px;
+}
+
+.info-container-header-about .title {
+  color: #f1f1f1;
+  margin: 0;
+  margin-top: 15px;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+
+.map-info-window-content .stars {
+  margin-left: 5px;
+}
+
+.contact-info .contact-line {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  font-size: 20px;
+  color:#7a7a7a;
+  font-weight: 450;
+}
+
+.map-info-window-content .contact-widget {
+  font-weight: bold;
+}
+
+.map-info-window-content .contact-text {
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.info-container-header-about p{
+  font-size: 20px;
+  height:50px;
+  overflow:hidden;
+  color:#e5e5e5;
+  font-weight: 450;
+}
+
+.contact-info {
+  font-size: 20px;
+}
+
+::ng-deep .gm-style-iw[role=dialog] {
+  padding: 0px;
+  border-radius: 15px;
+  & .gm-style-iw-d {
+    padding: 0px;
+    overflow: visible !important;
+  }
+
+  }
+
+  .residential{
+    background: linear-gradient(270deg, rgba(45,150,251,1) 0%, rgba(73,91,251,1) 100%);
+  }
+
+  .medical{
+    background: linear-gradient(270deg, rgba(251,5,35,1) 0%, rgba(134,0,0,1) 100%);
+  }
+
+  .offer{
+    background: linear-gradient(270deg, rgba(255,181,0,1) 0%, rgba(254,120,47,1) 100%);
+  }
+  
+  .welness{
+    background: linear-gradient(270deg, rgba(125,213,109,1) 0%, rgba(43,181,132,1) 100%);
+  }
+
+  ::ng-deep .gm-ui-hover-effect {
+ /*     background: none;
+    display: block;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-transform: none;
+    appearance: none;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    */
+    top: 10px !important;
+    right: 10px !important;
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 15px !important;
+  }
