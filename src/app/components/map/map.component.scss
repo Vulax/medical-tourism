@@ -175,27 +175,11 @@ ul {
   }
 
   ::ng-deep .gm-ui-hover-effect {
- /* background: none;
-    display: block;
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-    text-transform: none;
-    appearance: none;
-    position: absolute;
-    cursor: pointer;
-    user-select: none;
-    */
     top: 10px !important;
     right: 10px !important;
     width: 25px !important;
     height: 25px !important;
     font-size: 15px !important;
-    // & span {
-    //   height: 22px;
-    //   width: 22px;
-    //   margin: 0;
-    // }
   }
 
   .stars {
