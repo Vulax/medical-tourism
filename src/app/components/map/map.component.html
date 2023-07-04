@@ -136,20 +136,22 @@
               </div>
             </div>
             <div class="rating-section">
-              <span class="rating">4.5</span>
-              <span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+              <span class="rating">{{ selectedMarker?.rating }}</span>
+              <span class="stars">
+                <i *ngFor="let star of starsArray" [class]="getStarClass(star)"></i>
+              </span>
             </div>
             <div class="contact-info">
               <div class="contact-line">
-                <span class="contact-widget">Email:</span>
+                <i class="fa-solid fa-envelope fa-lg"></i>
                 <span class="contact-text">{{ selectedMarker?.email }}</span>
               </div>
               <div class="contact-line">
-                <span class="contact-widget">Phone:</span>
+                <i class="fa-solid fa-phone fa-lg"></i>
                 <span class="contact-text">{{ selectedMarker?.phone }}</span>
               </div>
               <div class="contact-line">
-                <span class="contact-widget">Address:</span>
+                <i class="fa-solid fa-location-dot fa-lg"></i>
                 <span class="contact-text">{{ selectedMarker?.address }}</span>
               </div>
           </div>

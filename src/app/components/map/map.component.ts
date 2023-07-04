@@ -126,6 +126,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         phone: place.phone,
         address: place.address,
         email: place.email,
+        rating: place.rating,
       };
     });
   }
@@ -152,6 +153,7 @@ export class MapComponent implements OnInit, AfterViewInit {
           phone: clinic.phone,
           address: clinic.address,
           email: clinic.email,
+          rating: clinic.rating,
         };
       });
   }
@@ -206,4 +208,21 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
   markers: any[] = [];
+
+  starsArray: number[] = [1, 2, 3, 4, 5]; // Array representing the number of stars
+
+  getStarClass(star: number): string {
+    const rating = this.selectedMarker?.rating;
+    if (!rating) {
+      return '';
+    }
+    const roundedRating = Math.floor(rating);
+    if (star <= roundedRating) {
+      return 'fa-solid fa-star';
+    } else if (star === Math.ceil(rating) && rating % 1 !== 0) {
+      return 'fa-solid fa-star-half-stroke';
+    }
+    return '';
+  }
 }
+
