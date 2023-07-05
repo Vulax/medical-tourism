@@ -1,280 +1,346 @@
 <app-header></app-header>
 
-<section class="section-about">
-    <div class="u-center-text u-margin-bottom-big">
-        <h2 class="heading-secondary">
-            Your Global Health Navigator
-        </h2>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small">Discover the Untouched Beauty of Montenegro</h3>
-            <p class="paragraph">
-                Nestled along the Adriatic Sea, Montenegro boasts breathtaking landscapes, charming towns, and a rich cultural heritage. Immerse yourself in the untouched beauty of this hidden gem as you embark on your health journey.
-            </p>
-
-            <h3 class="heading-tertiary u-margin-bottom-small">Unlock New Horizons: Your Journey to Global Wellness</h3>
-            <p class="paragraph">
-                At MediGuide, we believe that healthcare knows no borders. Expand your horizons and embark on a journey to global wellness, where you can access world-class medical treatments and procedures beyond your local options.
-            </p>
-
-            <a href="#" class="btn-text">Learn more &rarr;</a>
-        </div>
-        <div class="col-1-of-2">
-            <div class="composition">
-
-                <img srcset="assets/cave.jpg 300w, assets/cave.jpg 1000w"
-                    sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                    alt="Photo 1"
-                    class="composition__photo composition__photo--p1"
-                    src="assets/cave.jpg">
-
-                <img srcset="assets/lake.jpg 300w, assets/lake.jpg 1000w"
-                    sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                    alt="Photo 2"
-                    class="composition__photo composition__photo--p2"
-                    src="assets/lake.jpg">
-
-                <img srcset="assets/sv-stefan.jpg 300w, assets/sv-stefan.jpg 1000w"
-                    sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                    alt="Photo 3"
-                    class="composition__photo composition__photo--p3"
-                    src="assets/sv-stefan.jpg">
-                
-            </div>
-        </div>
-    </div>
+<section class="section-services">
+  <mat-form-field class="search-form-field">
+    <mat-label>Services</mat-label>
+    <input
+      type="text"
+      placeholder="Pick one"
+      aria-label="Number"
+      matInput
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
 </section>
 
-<section class="section-features">
-    
-    <div class="row">
-        <div class="col-1-of-4">
-            <div class="feature-box">
-                <i class="feature-box__icon icon-basic-calendar"></i>
-                <h3 class="heading-tertiary u-margin-bottom-small">Seamless Booking Experience</h3>
-                <p class="feature-box__text">
-                    Book your desired healthcare services with ease through our user-friendly platform, ensuring a hassle-free journey towards improved well-being.                                 
-                </p>
-            </div>
-        </div>
-
-        <div class="col-1-of-4">
-            <div class="feature-box">
-                <i class="feature-box__icon icon-basic-magnifier-plus"></i>
-                <h3 class="heading-tertiary u-margin-bottom-small">Discover Montenegro's Health & Tourism</h3>
-                <p class="feature-box__text">
-                    Explore a diverse range of health and tourism options, curated to enhance your overall experience while receiving top-quality care.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-1-of-4">
-            <div class="feature-box">
-                <i class="feature-box__icon icon-basic-folder-multiple"></i>
-                <h3 class="heading-tertiary u-margin-bottom-small">Comprehensive Health Packages</h3>
-                <p class="feature-box__text">
-                    Access health packages tailored to your needs, combining medical treatments, wellness activities, and the chance to explore the beauty of Montenegro.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-1-of-4">
-            <div class="feature-box">
-                <i class="feature-box__icon icon-basic-heart"></i>
-                <h3 class="heading-tertiary u-margin-bottom-small">Promotion and Guidance</h3>
-                <p class="feature-box__text">
-                    Benefit from our dedicated promotion and guidance services, assisting you in making informed decisions about the best healthcare and tourism options available in Montenegro.
-                </p>
-            </div>
-        </div>
-    </div>
+<section class="section-map">
+  <app-map id="section-map"></app-map>
 </section>
 
-<section class="section-tours" id="section-tours">
-    <div class="u-center-text u-margin-bottom-big">
-        <h2 class="heading-secondary">
-            Most popular tours
-        </h2>
+<section class="section-tours">
+  <div class="u-center-text u-margin-bottom-big">
+    <h2 class="heading-secondary" id="section-tours">Most popular tours</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-1-of-3">
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture card__picture--1">&nbsp;</div>
+          <h4 class="card__heading">
+            <span class="card__heading-span card__heading-span--1"
+              >Coastal Escape</span
+            >
+          </h4>
+          <div class="card__details">
+            <ul>
+              <li>3 day tours</li>
+              <li>Up to 30 people</li>
+              <li>2 tour guides</li>
+              <li>Sleep in cozy hotels</li>
+              <li>Difficulty: easy</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-1">
+          <div class="card__cta">
+            <div class="card__price-box">
+              <p class="card__price-only">Only</p>
+              <p class="card__price-value">$297</p>
+            </div>
+            <a href="#popup" class="btn btn--white">Book now!</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="row">
-        <div class="col-1-of-3">
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--1">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--1">Coastal Escape</span>
-                    </h4>
-                    <div class="card__details">
-                        <ul>
-                            <li>3 day tours</li>
-                            <li>Up to 30 people</li>
-                            <li>2 tour guides</li>
-                            <li>Sleep in cozy hotels</li>
-                            <li>Difficulty: easy</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card__side card__side--back card__side--back-1">
-                    <div class="card__cta">
-                        <div class="card__price-box">
-                            <p class="card__price-only">Only</p>
-                            <p class="card__price-value">$297</p>
-                        </div>
-                        <a href="#popup" class="btn btn--white">Book now!</a>
-                    </div>
-                </div>
-            </div>
+    <div class="col-1-of-3">
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture card__picture--2">&nbsp;</div>
+          <h4 class="card__heading">
+            <span class="card__heading-span card__heading-span--2"
+              >Mountain Majesty</span
+            >
+          </h4>
+          <div class="card__details">
+            <ul>
+              <li>7 day tours</li>
+              <li>Up to 40 people</li>
+              <li>6 tour guides</li>
+              <li>Countryside housing</li>
+              <li>Difficulty: medium</li>
+            </ul>
+          </div>
         </div>
-
-
-        <div class="col-1-of-3">
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--2">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--2">Mountain Majesty</span>
-                    </h4>
-                    <div class="card__details">
-                        <ul>
-                            <li>7 day tours</li>
-                            <li>Up to 40 people</li>
-                            <li>6 tour guides</li>
-                            <li>Countryside housing</li>
-                            <li>Difficulty: medium</li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="card__side card__side--back card__side--back-2">
-                    <div class="card__cta">
-                        <div class="card__price-box">
-                            <p class="card__price-only">Only</p>
-                            <p class="card__price-value">$497</p>
-                        </div>
-                        <a href="#popup" class="btn btn--white">Book now!</a>
-                    </div>
-                </div>
+        <div class="card__side card__side--back card__side--back-2">
+          <div class="card__cta">
+            <div class="card__price-box">
+              <p class="card__price-only">Only</p>
+              <p class="card__price-value">$497</p>
             </div>
+            <a href="#popup" class="btn btn--white">Book now!</a>
+          </div>
         </div>
-
-
-        <div class="col-1-of-3">
-            <div class="card">
-                <div class="card__side card__side--front">
-                    <div class="card__picture card__picture--3">
-                        &nbsp;
-                    </div>
-                    <h4 class="card__heading">
-                        <span class="card__heading-span card__heading-span--3">Historical Gems</span>
-                    </h4>
-                    <div class="card__details">
-                        <ul>
-                            <li>5 day tours</li>
-                            <li>Up to 15 people</li>
-                            <li>3 tour guides</li>
-                            <li>Luxury mountain hotels</li>
-                            <li>Difficulty: hard</li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="card__side card__side--back card__side--back-3">
-                    <div class="card__cta">
-                        <div class="card__price-box">
-                            <p class="card__price-only">Only</p>
-                            <p class="card__price-value">$897</p>
-                        </div>
-                        <a href="#popup" class="btn btn--white">Book now!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <div class="u-center-text u-margin-top-huge">
-        <a href="#" class="btn btn--green">Discover all tours</a>
+    <div class="col-1-of-3">
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture card__picture--3">&nbsp;</div>
+          <h4 class="card__heading">
+            <span class="card__heading-span card__heading-span--3"
+              >Historical Gems</span
+            >
+          </h4>
+          <div class="card__details">
+            <ul>
+              <li>5 day tours</li>
+              <li>Up to 15 people</li>
+              <li>3 tour guides</li>
+              <li>Luxury mountain hotels</li>
+              <li>Difficulty: hard</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-3">
+          <div class="card__cta">
+            <div class="card__price-box">
+              <p class="card__price-only">Only</p>
+              <p class="card__price-value">$897</p>
+            </div>
+            <a href="#popup" class="btn btn--white">Book now!</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- <div class="u-center-text u-margin-top-huge">
+    <a href="#" class="btn btn--green">Discover all tours</a>
+  </div> -->
 </section>
+
+<section class="section-about" id="section-about">
+  <div class="u-center-text u-margin-bottom-big">
+    <h2 class="heading-secondary">Your Global Health Navigator</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-1-of-2">
+      <h3 class="heading-tertiary u-margin-bottom-small">
+        Discover the Untouched Beauty of Montenegro
+      </h3>
+      <p class="paragraph">
+        Nestled along the Adriatic Sea, Montenegro boasts breathtaking
+        landscapes, charming towns, and a rich cultural heritage. Immerse
+        yourself in the untouched beauty of this hidden gem as you embark on
+        your health journey.
+      </p>
+
+      <h3 class="heading-tertiary u-margin-bottom-small">
+        Unlock New Horizons: Your Journey to Global Wellness
+      </h3>
+      <p class="paragraph">
+        At MediGuide, we believe that healthcare knows no borders. Expand your
+        horizons and embark on a journey to global wellness, where you can
+        access world-class medical treatments and procedures beyond your local
+        options.
+      </p>
+
+      <a href="#" class="btn-text">Learn more &rarr;</a>
+    </div>
+    <div class="col-1-of-2">
+      <div class="composition">
+        <img
+          srcset="assets/cave.jpg 300w, assets/cave.jpg 1000w"
+          sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+          alt="Photo 1"
+          class="composition__photo composition__photo--p1"
+          src="assets/cave.jpg"
+        />
+
+        <img
+          srcset="assets/lake.jpg 300w, assets/lake.jpg 1000w"
+          sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+          alt="Photo 2"
+          class="composition__photo composition__photo--p2"
+          src="assets/lake.jpg"
+        />
+
+        <img
+          srcset="assets/sv-stefan.jpg 300w, assets/sv-stefan.jpg 1000w"
+          sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+          alt="Photo 3"
+          class="composition__photo composition__photo--p3"
+          src="assets/sv-stefan.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section-features" id="section-features">
+  <div class="row">
+    <div class="col-1-of-4">
+      <div class="feature-box">
+        <i class="feature-box__icon icon-basic-calendar"></i>
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          Seamless Booking Experience
+        </h3>
+        <p class="feature-box__text">
+          Book your desired healthcare services with ease through our
+          user-friendly platform, ensuring a hassle-free journey towards
+          improved well-being.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-1-of-4">
+      <div class="feature-box">
+        <i class="feature-box__icon icon-basic-magnifier-plus"></i>
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          Discover Montenegro's Health & Tourism
+        </h3>
+        <p class="feature-box__text">
+          Explore a diverse range of health and tourism options, curated to
+          enhance your overall experience while receiving top-quality care.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-1-of-4">
+      <div class="feature-box">
+        <i class="feature-box__icon icon-basic-folder-multiple"></i>
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          Comprehensive Health Packages
+        </h3>
+        <p class="feature-box__text">
+          Access health packages tailored to your needs, combining medical
+          treatments, wellness activities, and the chance to explore the beauty
+          of Montenegro.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-1-of-4">
+      <div class="feature-box">
+        <i class="feature-box__icon icon-basic-heart"></i>
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          Promotion and Guidance
+        </h3>
+        <p class="feature-box__text">
+          Benefit from our dedicated promotion and guidance services, assisting
+          you in making informed decisions about the best healthcare and tourism
+          options available in Montenegro.
+        </p>
+      </div>
+    </div>
+  </div>
+</section> -->
 
 <section class="section-stories">
-    <div class="bg-video">
-        <video class="bg-video__content" autoplay muted loop>
-            <source src="assets/video.mp4" type="video/mp4">
-            <source src="assets/video.webm" type="video/webm">
-            Your browser is not supported!
-        </video>
-    </div>
+  <div class="bg-video">
+    <video class="bg-video__content" autoplay muted loop>
+      <source src="assets/video.mp4" type="video/mp4" />
+      <source src="assets/video.webm" type="video/webm" />
+      Your browser is not supported!
+    </video>
+  </div>
 
-    <div class="u-center-text u-margin-bottom-big">
-        <h2 class="heading-secondary">
-            We make people genuinely happy
-        </h2>
-    </div>
+  <div class="u-center-text u-margin-bottom-big">
+    <h2 class="heading-secondary" id="section-stories">
+      We make people genuinely happy
+    </h2>
+  </div>
 
-    <div class="row">
-        <div class="story">
-            <figure class="story__shape">
-                <img src="assets/nat-8.jpg" alt="Person on a tour" class="story__img">
-                <figcaption class="story__caption">Mary Smith</figcaption>
-            </figure>
-            <div class="story__text">
-                <h3 class="heading-tertiary u-margin-bottom-small">I highly recommend MediGuide for anyone seeking healthcare abroad</h3>
-                <p>
-                    The platform provided me with a wide range of options and helped me find the perfect medical facility in Montenegro. The team was attentive, responsive, and guided me through every step of the process. They truly lifted the borders of healthcare, making it accessible and stress-free. Thanks to MediGuide, I received top-quality care and enjoyed an unforgettable journey.
-                </p>
-            </div>
-        </div>
+  <div class="row">
+    <div class="story">
+      <figure class="story__shape">
+        <img src="assets/nat-8.jpg" alt="Person on a tour" class="story__img" />
+        <figcaption class="story__caption">Mary Smith</figcaption>
+      </figure>
+      <div class="story__text">
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          I highly recommend MediGuide for anyone seeking healthcare abroad
+        </h3>
+        <p>
+          The platform provided me with a wide range of options and helped me
+          find the perfect medical facility in Montenegro. The team was
+          attentive, responsive, and guided me through every step of the
+          process. They truly lifted the borders of healthcare, making it
+          accessible and stress-free. Thanks to MediGuide, I received
+          top-quality care and enjoyed an unforgettable journey.
+        </p>
+      </div>
     </div>
+  </div>
 
-    <div class="row">
-        <div class="story">
-            <figure class="story__shape">
-                <img src="assets/nat-9.jpg" alt="Person on a tour" class="story__img">
-                <figcaption class="story__caption">Jack Wilson</figcaption>
-            </figure>
-            <div class="story__text">
-                <h3 class="heading-tertiary u-margin-bottom-small">MediGuide exceeded my expectations in every aspect</h3>
-                <p>
-                    Their commitment to providing exceptional services is commendable. The platform's easy booking system allowed me to choose from a variety of health and tourism options in Montenegro. The team's attention to detail, personalized guidance, and thorough support throughout my healthcare journey were remarkable. MediGuide truly offers healthcare without borders, ensuring a seamless and enriching experience.
-                </p>
-            </div>
-        </div>
+  <div class="row">
+    <div class="story">
+      <figure class="story__shape">
+        <img src="assets/nat-9.jpg" alt="Person on a tour" class="story__img" />
+        <figcaption class="story__caption">Jack Wilson</figcaption>
+      </figure>
+      <div class="story__text">
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          MediGuide exceeded my expectations in every aspect
+        </h3>
+        <p>
+          Their commitment to providing exceptional services is commendable. The
+          platform's easy booking system allowed me to choose from a variety of
+          health and tourism options in Montenegro. The team's attention to
+          detail, personalized guidance, and thorough support throughout my
+          healthcare journey were remarkable. MediGuide truly offers healthcare
+          without borders, ensuring a seamless and enriching experience.
+        </p>
+      </div>
     </div>
+  </div>
 
-    <div class="u-center-text u-margin-top-huge">
-        <a href="#" class="btn-text">Read all stories &rarr;</a>
-    </div>
+  <div class="u-center-text u-margin-top-huge">
+    <a href="#" class="btn-text">Read all stories &rarr;</a>
+  </div>
 </section>
 
-<section class="section-book">
-    <div class="row">
-        <div class="book">
-            <div class="book__form">
-                <form action="#" class="form">
-                    <div class="u-margin-bottom-medium">
-                        <h2 class="heading-secondary">
-                            Newsletter
-                        </h2>
-                    </div>
+<section class="section-book" id="section-book">
+  <div class="row">
+    <div class="book">
+      <div class="book__form">
+        <form action="#" class="form">
+          <div class="u-margin-bottom-medium">
+            <h2 class="heading-secondary">Newsletter</h2>
+          </div>
 
-                    <div class="form__group">
-                        <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                        <label for="name" class="form__label">Full name</label>
-                    </div>
+          <div class="form__group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Full name"
+              id="name"
+              required
+            />
+            <label for="name" class="form__label">Full name</label>
+          </div>
 
-                    <div class="form__group">
-                        <input type="email" class="form__input" placeholder="Email address" id="email" required>
-                        <label for="email" class="form__label">Email address</label>
-                    </div>
+          <div class="form__group">
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Email address"
+              id="email"
+              required
+            />
+            <label for="email" class="form__label">Email address</label>
+          </div>
 
-                    <!-- <div class="form__group u-margin-bottom-medium">
+          <!-- <div class="form__group u-margin-bottom-medium">
                         <div class="form__radio-group">
                             <input type="radio" class="form__radio-input" id="small" name="size">
                             <label for="small" class="form__radio-label">
@@ -292,11 +358,11 @@
                         </div>
                     </div> -->
 
-                    <div class="form__group">
-                        <button class="btn btn--green">Subscribe &rarr;</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+          <div class="form__group">
+            <button class="btn btn--green">Subscribe &rarr;</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </section>
