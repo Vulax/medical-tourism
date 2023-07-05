@@ -28,6 +28,7 @@ import { BookingPopupComponent } from './components/booking-popup/booking-popup.
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     FooterComponent,
     HomeComponent,
     ProfileComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,
