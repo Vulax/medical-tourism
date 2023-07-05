@@ -9,7 +9,7 @@ import { Details2Component } from "./components/details2/details.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "register", component: Details2Component },
+  { path: "register", component: RegisterComponent },
   { path: "details/:id", component: DetailsComponent },
   { path: "profile", component: ProfileComponent },
   { path: "**", redirectTo: "" },
