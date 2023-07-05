@@ -440,4 +440,29 @@ fieldset, label {
   overflow: hidden;
 }
 
+#heart-icon2,
+#heart-icon3,
+#heart-icon4{
+  float:right;
+  margin-top:15px;
+  font-size:20px;
+  cursor: pointer;
+}
+
+#block{
+  color:white;
+  opacity:0;
+  display:flex;
+  position: fixed;
+  background:#565fff;
+  width:250px;
+  height:100px;
+  justify-content:center;
+  align-items:center;
+  right:0;
+  bottom:40px;
+  box-shadow: 1px 1px 10px #4b5054;
+  cursor:default;
+}
+
 
