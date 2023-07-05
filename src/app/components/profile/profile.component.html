@@ -1,0 +1,36 @@
+<div class="profile-info">
+  <i class="icon-phone"></i>
+  <mat-form-field class="app-form-field">
+    <mat-label>Email</mat-label>
+    <input
+      type="email"
+      matInput
+      placeholder="Ex. pat@example.com"
+      value="laura@gmail.com"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="app-form-field">
+    <mat-label>Enter your password</mat-label>
+    <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      value="laura@gmail.com"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field class="app-form-field">
+    <mat-label>Telephone</mat-label>
+    <span matPrefix>+382 &nbsp;</span>
+    <input type="tel" matInput placeholder="0XX XXX XXX" value="0611474553" />
+  </mat-form-field>
+</div>

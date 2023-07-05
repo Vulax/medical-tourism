@@ -1,20 +1,21 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from "@angular/common/http";
 import {
   AfterViewInit,
   Component,
   OnInit,
   ViewChild,
   ViewChildren,
-} from '@angular/core';
-import { MapInfoWindow, MapMarker } from '@angular/google-maps';
-import { Observable, catchError, delay, first, map, of, tap } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import places from '../../../assets/places.json';
-import clinics from '../../../assets/clinics.json';
+} from "@angular/core";
+import { MapInfoWindow, MapMarker } from "@angular/google-maps";
+import { Observable, catchError, delay, first, map, of, tap } from "rxjs";
+import { environment } from "src/environments/environment";
+import places from "../../../assets/places.json";
+import clinics from "../../../assets/clinics.json";
 
 @Component({
-  templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss'],
+  selector: "app-map",
+  templateUrl: "./map.component.html",
+  styleUrls: ["./map.component.scss"],
 })
 export class MapComponent implements OnInit, AfterViewInit {
   isMedicalShown: boolean = true;
@@ -41,7 +42,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   @ViewChildren(MapMarker) mapMarkers!: MapMarker[];
 
   @ViewChild(MapInfoWindow, { static: false }) infoWindow!: MapInfoWindow;
-  infoContent = '';
+  infoContent = "";
   openInfo(marker: any, element?: MapMarker) {
     this.infoWindow.close();
     if (element === undefined) {
@@ -51,7 +52,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     this.infoContent = marker.html;
     this.selectedMarker = marker;
     this.infoWindow.open(element);
-    if (marker.type === 'medical') {
+    if (marker.type === "medical") {
       this.selectedMedicalMarker = marker;
     } else {
       this.selectedResidentialMarker = marker;
@@ -67,12 +68,12 @@ export class MapComponent implements OnInit, AfterViewInit {
     lng: 18.53109191152655,
   };
   options: google.maps.MapOptions = {
-    mapTypeId: 'roadmap',
+    mapTypeId: "satellite",
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
     zoomControl: true,
-    scrollwheel: false,
+    scrollwheel: true,
     disableDoubleClickZoom: true,
     maxZoom: 15,
     minZoom: 8,
@@ -81,18 +82,20 @@ export class MapComponent implements OnInit, AfterViewInit {
   apiLoaded: Observable<boolean>;
 
   categories = [
-    { name: 'all', count: 5 },
-    { name: 'dentistry', count: 2 },
-    { name: 'surgery', count: 2 },
-    { name: 'reproduction', count: 1 },
-    { name: 'oncology', count: 0 },
+    { name: "all", count: 5 },
+    { name: "dentistry", count: 2 },
+    { name: "surgery", count: 2 },
+    { name: "reproduction", count: 1 },
+    { name: "oncology", count: 0 },
   ];
-  selectedCategory = 'all';
+
+  selectedCategory = "all";
+
   constructor(httpClient: HttpClient) {
     this.apiLoaded = httpClient
       .jsonp(
         `https://maps.googleapis.com/maps/api/js?key=${environment.googleMapsApiKey}&libraries=visualization`,
-        'callback'
+        "callback"
       )
       .pipe(
         tap(() => {}),
@@ -101,7 +104,7 @@ export class MapComponent implements OnInit, AfterViewInit {
       );
     this.apiLoaded.pipe(first(), delay(1000)).subscribe(() => {
       this.infoWindow.closeclick.subscribe(() => {
-        console.log('info window closed');
+        console.log("info window closed");
       });
     });
   }
@@ -111,14 +114,14 @@ export class MapComponent implements OnInit, AfterViewInit {
       return {
         id: place.id,
         position: place.position,
-        title: place.name + ' ' + place.rating,
-        info: place.name + ' ' + place.rating,
+        title: place.name + " " + place.rating,
+        info: place.name + " " + place.rating,
         type: place.type,
         category: place.category,
         html: `<h1>${place.name}</h1><p>${place.rating}</p><a routerLink="/details" routerLinkActive="active">Details</a>`,
         options: {
           icon: {
-            url: './assets/home.png',
+            url: "./assets/home.png",
             scaledSize: { width: 50, height: 50 },
           },
         },
@@ -130,9 +133,9 @@ export class MapComponent implements OnInit, AfterViewInit {
     });
   }
 
-  getClinics(category: string = 'all') {
+  getClinics(category: string = "all") {
     return clinics
-      .filter((clinic) => category === 'all' || clinic.category === category)
+      .filter((clinic) => category === "all" || clinic.category === category)
       .map((clinic) => {
         return {
           id: clinic.id,
@@ -144,7 +147,7 @@ export class MapComponent implements OnInit, AfterViewInit {
           category: clinic.category,
           options: {
             icon: {
-              url: './assets/heart.png',
+              url: "./assets/heart.png",
               scaledSize: { width: 50, height: 50 },
             },
           },
@@ -162,10 +165,10 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
   getButton() {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.addEventListener('click', () => this.showPlaces());
-    btn.textContent = 'test';
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.addEventListener("click", () => this.showPlaces());
+    btn.textContent = "test";
     return btn.innerHTML;
   }
 
@@ -183,10 +186,10 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {}
 
-  filterMarkersByType(type: 'medical' | 'residential') {
-    if (type === 'medical') {
+  filterMarkersByType(type: "medical" | "residential") {
+    if (type === "medical") {
       return this.getClinics();
-    } else if (type === 'residential') {
+    } else if (type === "residential") {
       return this.getPlaces();
     }
     return [];
