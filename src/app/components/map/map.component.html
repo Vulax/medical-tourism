@@ -124,38 +124,53 @@
       </map-marker>
       <map-info-window>
         <div id="map-info-window-content">
-            <div class="info-container-header" 
-              [class.residential]="selectedMarker?.type === 'residential'" 
-              [class.medical]="selectedMarker?.type === 'medical'" 
-              [class.offer]="selectedMarker?.type === 'offer'" 
-              [class.welness]="selectedMarker?.type === 'welness'">
-              <img src="../assets/profilepicturev1.jpg" alt="slika" class="head-image-small">
-              <div class="info-container-header-about">
-                <h1 class="title">{{ selectedMarker?.title }}</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
+          <div
+            class="info-container-header"
+            [class.residential]="selectedMarker?.type === 'residential'"
+            [class.medical]="selectedMarker?.type === 'medical'"
+            [class.offer]="selectedMarker?.type === 'offer'"
+            [class.welness]="selectedMarker?.type === 'welness'"
+          >
+            <img
+              src="../assets/profilepicturev1.jpg"
+              alt="slika"
+              class="head-image-small"
+            />
+            <div class="info-container-header-about">
+              <h1 class="title">{{ selectedMarker?.title }}</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="rating-section">
-              <span class="rating">{{ selectedMarker?.rating }}</span>
-              <span class="stars">
-                <i *ngFor="let star of starsArray" [class]="getStarClass(star)"></i>
-              </span>
-            </div>
-            <div class="contact-info">
-              <div class="contact-line">
-                <i class="fa-solid fa-envelope fa-lg"></i>
-                <span class="contact-text">{{ selectedMarker?.email }}</span>
-              </div>
-              <div class="contact-line">
-                <i class="fa-solid fa-phone fa-lg"></i>
-                <span class="contact-text">{{ selectedMarker?.phone }}</span>
-              </div>
-              <div class="contact-line">
-                <i class="fa-solid fa-location-dot fa-lg"></i>
-                <span class="contact-text">{{ selectedMarker?.address }}</span>
-              </div>
           </div>
-        <!-- 
+          <div class="rating-section">
+            <span class="rating">{{ selectedMarker?.rating }}</span>
+            <span class="stars">
+              <i
+                *ngFor="let star of starsArray"
+                [class]="getStarClass(star)"
+              ></i>
+            </span>
+          </div>
+          <div class="contact-info">
+            <div class="contact-line">
+              <i class="fa-solid fa-envelope fa-lg"></i>
+              <span class="contact-text">{{ selectedMarker?.email }}</span>
+            </div>
+            <div class="contact-line">
+              <i class="fa-solid fa-phone fa-lg"></i>
+              <span class="contact-text">{{ selectedMarker?.phone }}</span>
+            </div>
+            <div class="contact-line">
+              <i class="fa-solid fa-location-dot fa-lg"></i>
+              <span class="contact-text">{{ selectedMarker?.address }}</span>
+            </div>
+
+            <a
+              class="details-link"
+              routerLink="/details/{{ selectedMarker?.id }}"
+              >Details</a
+            >
+          </div>
+          <!-- 
         <h1>{{ selectedMarker?.title }}</h1>
         <p>Category: {{ selectedMarker?.category }}</p>
         <p>Email: {{ selectedMarker?.email }}</p>
@@ -164,9 +179,8 @@
 
         <p>{{ selectedMarker?.description }}</p>
 
-        <a routerLink="/details/{{ selectedMarker?.id }}">Details</a> 
-        -->
-        </div>
+        
+        --></div>
       </map-info-window>
     </google-map>
   </div>

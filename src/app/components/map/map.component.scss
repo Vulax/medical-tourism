@@ -93,7 +93,6 @@ ul {
   padding-left: 10px;
 }
 
-
 .map-info-window-content .stars {
   margin-left: 5px;
 }
@@ -105,12 +104,12 @@ ul {
   margin-bottom: 15px;
   padding-left: 10px;
   font-size: 20px;
-  color:#7a7a7a;
+  color: #7a7a7a;
   font-weight: 450;
   gap: 15px;
 }
 
-.fa{
+.fa {
   font-size: 45px;
 }
 
@@ -120,11 +119,11 @@ ul {
   font-weight: 450;
 }
 
-.info-container-header-about p{
+.info-container-header-about p {
   font-size: 20px;
-  height:50px;
-  overflow:hidden;
-  color:#e5e5e5;
+  height: 50px;
+  overflow: hidden;
+  color: #e5e5e5;
   font-weight: 450;
 }
 
@@ -132,13 +131,12 @@ ul {
   font-size: 20px;
 }
 
-::ng-deep .gm-style-iw[role=dialog] {
+::ng-deep .gm-style-iw[role="dialog"] {
   padding: 0px;
   border-radius: 15px;
   & .gm-style-iw-d {
     padding: 0px;
     overflow: visible !important;
-   
   }
 
   & .gm-ui-hover-effect {
@@ -154,44 +152,63 @@ ul {
       margin: 0 !important;
     }
   }
+}
 
-  }
+.residential {
+  background: linear-gradient(
+    270deg,
+    rgba(45, 150, 251, 1) 0%,
+    rgba(73, 91, 251, 1) 100%
+  );
+}
 
+.medical {
+  background: linear-gradient(
+    270deg,
+    rgba(251, 5, 35, 1) 0%,
+    rgba(134, 0, 0, 1) 100%
+  );
+}
 
-  .residential{
-    background: linear-gradient(270deg, rgba(45,150,251,1) 0%, rgba(73,91,251,1) 100%);
-  }
+.offer {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 181, 0, 1) 0%,
+    rgba(254, 120, 47, 1) 100%
+  );
+}
 
-  .medical{
-    background: linear-gradient(270deg, rgba(251,5,35,1) 0%, rgba(134,0,0,1) 100%);
-  }
+.welness {
+  background: linear-gradient(
+    270deg,
+    rgba(125, 213, 109, 1) 0%,
+    rgba(43, 181, 132, 1) 100%
+  );
+}
 
-  .offer{
-    background: linear-gradient(270deg, rgba(255,181,0,1) 0%, rgba(254,120,47,1) 100%);
-  }
-  
-  .welness{
-    background: linear-gradient(270deg, rgba(125,213,109,1) 0%, rgba(43,181,132,1) 100%);
-  }
+::ng-deep .gm-ui-hover-effect {
+  top: 10px !important;
+  right: 10px !important;
+  width: 25px !important;
+  height: 25px !important;
+  font-size: 15px !important;
+}
 
-  ::ng-deep .gm-ui-hover-effect {
-    top: 10px !important;
-    right: 10px !important;
-    width: 25px !important;
-    height: 25px !important;
-    font-size: 15px !important;
-  }
+.stars {
+  color: #ffd700;
+}
 
-  .stars {
-    color: #ffd700;
-  }
-  
-  .fa-star-half-stroke:before {
-    content: "\f089";
-  }
-  
-  .rating-section .stars i {
-    display: inline-block;
-  }
-  
- 
+.fa-star-half-stroke:before {
+  content: "\f089";
+}
+
+.rating-section .stars i {
+  display: inline-block;
+}
+
+.details-link {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  text-align: end;
+  display: inline-block;
+}
