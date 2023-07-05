@@ -27,12 +27,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { BookingPopupComponent } from './components/booking-popup/booking-popup.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { Details2Component } from './components/details2/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     DetailsComponent,
+    Details2Component,
     NavigationComponent,
     HeaderComponent,
     BookingPopupComponent,
