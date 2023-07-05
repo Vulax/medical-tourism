@@ -45,3 +45,441 @@
 .profile-navigation {
   margin-left: 3rem;
 }
+
+.details-page {
+  background-color: #4c496f;
+  background: linear-gradient(to bottom, #4c496f 1%, #6bd791 100%);
+  padding: 2.5rem 0;
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", Georgia, Times, "Times New Roman";
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+button.icon {
+  background: none;
+  border: none;
+  //-webkit-appearance: none;
+}
+
+// stop
+
+.container {
+  box-shadow: 5px 9px 40px rgba(0, 0, 0, 0.3);
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+.destination {
+  display: flex;
+  width: 100%;
+  min-height: 784px;
+}
+
+.destination-locale,
+.destination-details {
+  padding: 2.5rem 0 2.5rem 3.3333333333%;
+  width: 47.5%;
+}
+
+.destination-locale {
+  background: url("../../../assets/Timeless-Beauty.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.destination-locale header {
+  display: flex;
+}
+
+.destination-card {
+  padding-top: 0.5625rem;
+  padding-right: 1.25rem;
+}
+
+.destination-number,
+.destination-country {
+  color: rgba(255, 255, 255, 0.785);
+  display: block;
+}
+
+.destination-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: right;
+}
+
+.destination-country {
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+}
+
+.destination-title {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 0.5625rem;
+  padding-left: 1.25rem;
+}
+.destination-title h1 {
+  color: #ffffff;
+  line-height: 1;
+  font-size: 3.75rem;
+}
+.destination-title .meta {
+  color: #e9dddd;
+  display: block;
+  font-size: 1.2rem;
+}
+
+.destination-details {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.destination-details h2 {
+  color: #4c496f;
+  font-size: 1.875rem;
+}
+
+.video {
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  display: block;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  bottom: 60px;
+  left: -55px;
+}
+.video img {
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video svg {
+  display: block;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  margin-left: -21px;
+}
+
+.gutter {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding-right: 7.4074074074%;
+  padding-left: 3.75rem;
+  position: relative;
+  user-select: none;
+}
+.gutter:before {
+  content: "";
+  display: block;
+  width: 50px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  border-top: 1px solid #4c496f;
+}
+
+.nav {
+  background-color: #6168a2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+}
+
+.nav .toggle,
+.nav .next {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.nav .toggle svg,
+.nav .next svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.nav .toggle,
+.nav .toggle svg {
+  width: 28px;
+  height: 20px;
+}
+.nav .next {
+  position: relative;
+  top: -8px;
+}
+.nav .next,
+.nav .next svg {
+  width: 20px;
+  height: 13px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding: 0;
+}
+.options .like,
+.options .like svg {
+  width: 20px;
+  height: 18px;
+}
+.options .share {
+  margin-left: 0.625rem;
+}
+.options .share,
+.options .share svg {
+  width: 21px;
+  height: 18px;
+}
+.options .more {
+  color: #d77f6b;
+  font-size: 0.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.options .more:before {
+  content: "";
+  border-bottom: 1px solid #d77f6b;
+  display: inline-block;
+  margin-right: 6px;
+  width: 40px;
+}
+
+.carousel {
+  margin-right: -11.2962962963%;
+  padding: 3.25rem 0 1.875rem 3.75rem;
+}
+
+.carousel-cell {
+  background: #fafafa;
+  margin-left: 10px;
+  width: 35%;
+}
+
+.carousel-cell img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*
+Rating Stars credit goes to: https://codepen.io/jamesbarnett/pen/vlpkh
+*/
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+.rating {
+  border: none;
+  margin-right: auto;
+  margin-top: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 3px;
+  font-size: 1rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "★";
+}
+
+.rating > .half:before {
+  content: "★";
+  position: absolute;
+}
+
+.rating > label {
+  color: #c5a7c3;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #6f496e;
+}
+
+/* hover previous stars in list */
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #6f496e;
+}
+
+.heart-icon.filled {
+  fill: blue;
+}
+
+#heart-icon {
+  cursor: pointer;
+}
+
+.options li {
+  user-select: none;
+}
+
+.price {
+  width: 140px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #000;
+  background-color: #2ee59d;
+  border: none;
+  border-radius: 45px;
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #6168a2;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #000;
+  transform: translateY(-7px);
+}
+
+.icons {
+  padding-top: 15px;
+}
+
+.nav-header {
+  text-align: center;
+  height: 50px;
+  background-color: white; //#4c496f
+  width: 100%;
+  // margin-left: 23%;
+  border-radius: 40px;
+}
+
+.services-container {
+  height: 615px;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 20px;
+}
+
+.service1,
+.service2,
+.service3 {
+  display: flex;
+  height: 191.5px;
+  width: 94%;
+  margin-left: 3%;
+  background-color: rgba(255, 255, 255, 0.322);
+  margin-top: 10px;
+}
+
+.section {
+  width: 50%;
+  height: 100%;
+}
+.section1 {
+  color: white;
+  padding: 15px 40px 35px 20px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+.section1 > h2 {
+  margin: 10px 0px 10px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Lato";
+}
+.section1 > p {
+  margin: 10px 5px 10px 0px;
+  font-size: 13px;
+  color: hsl(0, 0%, 100%);
+  line-height: 1.8;
+}
+.section1 > div {
+  display: flex;
+  flex-direction: row;
+}
+.section1 > div div {
+  width: 33.3%;
+}
+.section1 > div div h4 {
+  margin-bottom: 0px;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+}
+.section1 > div div p {
+  font-size: 9.5px;
+  letter-spacing: 0.4px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.section2 {
+  background: url("../../../assets/Rhino.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.section3 {
+  background: url("../../../assets/Facelift.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.section4 {
+  background: url("../../../assets/Liposuction.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
