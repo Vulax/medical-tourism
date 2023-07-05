@@ -1,23 +1,5 @@
 <app-header></app-header>
 
-<section class="section-services">
-  <mat-form-field class="search-form-field">
-    <mat-label>Services</mat-label>
-    <input
-      type="text"
-      placeholder="Pick one"
-      aria-label="Number"
-      matInput
-      [matAutocomplete]="auto"
-    />
-    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-      <mat-option *ngFor="let option of filteredOptions" [value]="option">
-        {{ option }}
-      </mat-option>
-    </mat-autocomplete>
-  </mat-form-field>
-</section>
-
 <section class="section-map">
   <app-map id="section-map"></app-map>
 </section>

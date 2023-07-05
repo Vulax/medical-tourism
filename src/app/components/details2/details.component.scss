@@ -1,18 +1,16 @@
-
 .details-page {
   background-color: #4c496f;
   background: linear-gradient(to bottom, #4c496f 1%, #6bd791 100%);
-  padding: 2.5rem 0;
+  padding: 2.5rem 2rem;
   min-height: 100vh;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Playfair Display", Georgia, Times, "Times New Roman";
   font-weight: 700;
   margin: 0 0 0.35rem;
 }
-
-
 
 .description {
   font-size: 1.5rem;
@@ -25,7 +23,7 @@ button.icon {
   //-webkit-appearance: none;
 }
 
-// stop 
+// stop
 
 .container {
   box-shadow: 5px 9px 40px rgba(0, 0, 0, 0.3);
@@ -144,7 +142,7 @@ button.icon {
   padding-right: 7.4074074074%;
   padding-left: 3.75rem;
   position: relative;
-  user-select:none;
+  user-select: none;
 }
 .gutter:before {
   content: "";
@@ -164,8 +162,6 @@ button.icon {
   padding: 2.5rem 0;
   width: 40%;
 }
-
-
 
 .nav .toggle,
 .nav .next {
@@ -250,7 +246,8 @@ button.icon {
 /*
 Rating Stars credit goes to: https://codepen.io/jamesbarnett/pen/vlpkh
 */
-fieldset, label {
+fieldset,
+label {
   margin: 0;
   padding: 0;
 }
@@ -304,23 +301,23 @@ fieldset, label {
   fill: blue;
 }
 
-#heart-icon{
-  cursor:pointer;
+#heart-icon {
+  cursor: pointer;
 }
 
-.options li{
-  user-select:none;
+.options li {
+  user-select: none;
 }
 
-.price{
+.price {
   width: 140px;
   height: 45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 11px;
   font-weight: 500;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #000;
-  background-color: #2EE59D;
+  background-color: #2ee59d;
   border: none;
   border-radius: 45px;
   transition: all 0.3s ease 0s;
@@ -330,7 +327,7 @@ fieldset, label {
 .button {
   width: 140px;
   height: 45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 11px;
   font-weight: 500;
   color: #fff;
@@ -341,44 +338,44 @@ fieldset, label {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  }
+}
 
 .button:hover {
-  background-color: #2EE59D;
+  background-color: #2ee59d;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #000;
   transform: translateY(-7px);
 }
 
-.icons{
-  padding-top:15px;
+.icons {
+  padding-top: 15px;
 }
 
-.nav-header{
+.nav-header {
   text-align: center;
   height: 50px;
-  background-color: white ; //#4c496f
-  width:53%;
-  margin-left:23%;
+  background-color: white; //#4c496f
+  width: 53%;
+  margin-left: 23%;
   border-radius: 40px;
 }
 
-.services-container{
-  height:615px;
-  width:90%;
-  margin-left:5%;
+.services-container {
+  height: 615px;
+  width: 90%;
+  margin-left: 5%;
   border-radius: 20px;
 }
 
 .service1,
 .service2,
-.service3{
-  display:flex;
-  height:191.5px;
-  width:94%;
-  margin-left:3%;
-  background-color:rgba(255, 255, 255, 0.322);
-  margin-top:10px;
+.service3 {
+  display: flex;
+  height: 191.5px;
+  width: 94%;
+  margin-left: 3%;
+  background-color: rgba(255, 255, 255, 0.322);
+  margin-top: 10px;
 }
 
 .section {
@@ -416,7 +413,7 @@ fieldset, label {
 }
 .section1 > div div p {
   font-size: 9.5px;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   color: hsla(0, 0%, 100%, 0.6);
 }
 .section2 {
@@ -433,7 +430,7 @@ fieldset, label {
   overflow: hidden;
 }
 
-.section4{
+.section4 {
   background: url("../../../assets/Liposuction.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -442,27 +439,25 @@ fieldset, label {
 
 #heart-icon2,
 #heart-icon3,
-#heart-icon4{
-  float:right;
-  margin-top:15px;
-  font-size:20px;
+#heart-icon4 {
+  float: right;
+  margin-top: 15px;
+  font-size: 20px;
   cursor: pointer;
 }
 
-#block{
-  color:white;
-  opacity:0;
-  display:flex;
+#block {
+  color: white;
+  opacity: 0;
+  display: flex;
   position: fixed;
-  background:#565fff;
-  width:250px;
-  height:100px;
-  justify-content:center;
-  align-items:center;
-  right:0;
-  bottom:40px;
+  background: #565fff;
+  width: 250px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 40px;
   box-shadow: 1px 1px 10px #4b5054;
-  cursor:default;
+  cursor: default;
 }
-
-

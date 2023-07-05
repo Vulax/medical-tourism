@@ -1,14 +1,36 @@
 <header class="header">
-    <div class="header__logo-box">
-        <i class="icon-basic-compass"></i>
-    </div>
+  <div class="header__logo-box">
+    <i class="icon-basic-compass"></i>
+  </div>
 
-    <div class="header__text-box">
-        <h1 class="heading-primary">
-            <span class="heading-primary--main">MediGuide</span>
-            <span class="heading-primary--sub">Embracing a World of Healthcare Without Borders</span>
-        </h1>
+  <div class="header__text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary--main">MediGuide</span>
+      <span class="heading-primary--sub"
+        >Embracing a World of Healthcare Without Borders</span
+      >
+    </h1>
 
-        <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
-    </div>
+    <section class="section-services">
+      <mat-form-field class="search-form-field">
+        <mat-label>Services</mat-label>
+        <input
+          type="text"
+          placeholder="Pick one"
+          aria-label="Number"
+          matInput
+          [formControl]="myControl"
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-icon matPrefix class="my-icon">search</mat-icon>
+      </mat-form-field>
+    </section>
+
+    <!-- <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a> -->
+  </div>
 </header>

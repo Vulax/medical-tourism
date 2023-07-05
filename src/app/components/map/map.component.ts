@@ -11,6 +11,8 @@ import { Observable, catchError, delay, first, map, of, tap } from "rxjs";
 import { environment } from "src/environments/environment";
 import places from "../../../assets/places.json";
 import clinics from "../../../assets/clinics.json";
+import { SearchService } from "../search.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-map",
@@ -73,7 +75,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     streetViewControl: false,
     fullscreenControl: false,
     zoomControl: true,
-    scrollwheel: true,
+    scrollwheel: false,
     disableDoubleClickZoom: true,
     maxZoom: 15,
     minZoom: 8,
@@ -91,7 +93,11 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   selectedCategory = "all";
 
-  constructor(httpClient: HttpClient) {
+  constructor(
+    httpClient: HttpClient,
+    private service: SearchService,
+    private router: Router
+  ) {
     this.apiLoaded = httpClient
       .jsonp(
         `https://maps.googleapis.com/maps/api/js?key=${environment.googleMapsApiKey}&libraries=visualization`,
@@ -184,6 +190,12 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.mapFilterChanged();
+    this.service.search$.subscribe((search) => {
+      if (search) {
+        console.log(search);
+        this.openInfo(this.markers.find((marker) => marker.id === "clinic-3"));
+      }
+    });
   }
 
   ngAfterViewInit(): void {}
@@ -217,15 +229,14 @@ export class MapComponent implements OnInit, AfterViewInit {
   getStarClass(star: number): string {
     const rating = this.selectedMarker?.rating;
     if (!rating) {
-      return '';
+      return "";
     }
     const roundedRating = Math.floor(rating);
     if (star <= roundedRating) {
-      return 'fa-solid fa-star';
+      return "fa-solid fa-star";
     } else if (star === Math.ceil(rating) && rating % 1 !== 0) {
-      return 'fa-solid fa-star-half-stroke';
+      return "fa-solid fa-star-half-stroke";
     }
-    return '';
+    return "";
   }
 }
-

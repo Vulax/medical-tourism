@@ -2,7 +2,7 @@
   <div id="map-left-side">
     <!-- <p>pick a clinic and a residence by clicking on the map</p> -->
     <div id="map-controls">
-      <div id="map-checkboxes">
+      <!-- <div id="map-checkboxes">
         <mat-checkbox
           class="app-checkbox"
           [color]="'primary'"
@@ -18,27 +18,29 @@
           [(ngModel)]="isResidentialShown"
           >Show Residential</mat-checkbox
         >
-      </div>
-      <mat-form-field>
-        <mat-label>City</mat-label>
-        <mat-select [value]="'Herceg Novi'" disabled>
-          <mat-option [value]="'Herceg Novi'"> Herceg Novi </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Category</mat-label>
-        <mat-select
-          [(value)]="selectedCategory"
-          (selectionChange)="filterMarkers(selectedCategory)"
-        >
-          <mat-option
-            *ngFor="let category of categories"
-            [value]="category.name"
+      </div> -->
+      <div class="search-options">
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <mat-select [value]="'Herceg Novi'" disabled>
+            <mat-option [value]="'Herceg Novi'"> Herceg Novi </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Category</mat-label>
+          <mat-select
+            [(value)]="selectedCategory"
+            (selectionChange)="filterMarkers(selectedCategory)"
           >
-            {{ category.name | titlecase }} ({{ category.count }})
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+            <mat-option
+              *ngFor="let category of categories"
+              [value]="category.name"
+            >
+              {{ category.name | titlecase }} ({{ category.count }})
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
       <!-- <p>Chosen Clinic: {{ selectedMedicalMarker?.info }}</p> -->
       <!-- <p>Chosen Residence: {{ selectedResidentialMarker?.info }}</p> -->
@@ -53,7 +55,7 @@
         <mat-date-range-picker #picker></mat-date-range-picker>
       </mat-form-field>
     </div>
-
+    <!-- 
     <div id="listed-markers">
       <mat-tab-group
         mat-stretch-tabs="true"
@@ -89,8 +91,8 @@
           </ul></mat-tab
         >
       </mat-tab-group>
-    </div>
-
+    </div> -->
+    <!-- 
     <div id="selected-markers">
       <p>
         Selected Clinic:
@@ -101,76 +103,81 @@
         <u>{{ selectedResidentialMarker?.title }}</u>
       </p>
     </div>
-  </div>
+  </div> -->
 
-  <div id="map-wrapper" *ngIf="apiLoaded | async">
-    <google-map
-      height="100%"
-      width="100%"
-      [zoom]="zoom"
-      [center]="center"
-      [options]="options"
-      (mapClick)="click($event)"
-    >
-      <map-marker
-        #somemarker="mapMarker"
-        *ngFor="let marker of markers"
-        [position]="marker.position"
-        [label]="marker.label"
-        [title]="marker.title"
-        [options]="marker.options"
-        (mapClick)="openInfo(marker, somemarker)"
+    <div id="map-wrapper" *ngIf="apiLoaded | async">
+      <google-map
+        height="100%"
+        width="100%"
+        [zoom]="zoom"
+        [center]="center"
+        [options]="options"
+        (mapClick)="click($event)"
       >
-      </map-marker>
-      <map-info-window>
-        <div id="map-info-window-content">
-          <div
-            class="info-container-header"
-            [class.residential]="selectedMarker?.type === 'residential'"
-            [class.medical]="selectedMarker?.type === 'medical'"
-            [class.offer]="selectedMarker?.type === 'offer'"
-            [class.welness]="selectedMarker?.type === 'welness'"
-          >
-            <img
-              src="../assets/profilepicturev1.jpg"
-              alt="slika"
-              class="head-image-small"
-            />
-            <div class="info-container-header-about">
-              <h1 class="title">{{ selectedMarker?.title }}</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <div class="rating-section">
-            <span class="rating">{{ selectedMarker?.rating }}</span>
-            <span class="stars">
-              <i
-                *ngFor="let star of starsArray"
-                [class]="getStarClass(star)"
-              ></i>
-            </span>
-          </div>
-          <div class="contact-info">
-            <div class="contact-line">
-              <i class="fa-solid fa-envelope fa-lg"></i>
-              <span class="contact-text">{{ selectedMarker?.email }}</span>
-            </div>
-            <div class="contact-line">
-              <i class="fa-solid fa-phone fa-lg"></i>
-              <span class="contact-text">{{ selectedMarker?.phone }}</span>
-            </div>
-            <div class="contact-line">
-              <i class="fa-solid fa-location-dot fa-lg"></i>
-              <span class="contact-text">{{ selectedMarker?.address }}</span>
-            </div>
-
-            <a
-              class="details-link"
-              routerLink="/details/{{ selectedMarker?.id }}"
-              >Details</a
+        <map-marker
+          #somemarker="mapMarker"
+          *ngFor="let marker of markers"
+          [position]="marker.position"
+          [label]="marker.label"
+          [title]="marker.title"
+          [options]="marker.options"
+          (mapClick)="openInfo(marker, somemarker)"
+        >
+        </map-marker>
+        <map-info-window>
+          <div id="map-info-window-content">
+            <div
+              class="info-container-header"
+              [class.residential]="selectedMarker?.type === 'residential'"
+              [class.medical]="selectedMarker?.type === 'medical'"
+              [class.offer]="selectedMarker?.type === 'offer'"
+              [class.welness]="selectedMarker?.type === 'welness'"
             >
-          </div>
-          <!-- 
+              <img
+                src="assets/profilepicturev1.jpg"
+                alt="slika"
+                class="head-image-small"
+              />
+              <div class="info-container-header-about">
+                <h1 class="title">{{ selectedMarker?.title }}</h1>
+                <p class="marker-info-window-desc">
+                  Dr. Borko’s plastic surgery methods, staff, and equipment are
+                  the finest in the industry. His consultations are very
+                  detailed and comprehensive, allowing him to truly understand
+                  his patient’s goals and expectations.
+                </p>
+              </div>
+            </div>
+            <div class="rating-section">
+              <span class="rating">{{ selectedMarker?.rating }}</span>
+              <span class="stars">
+                <i
+                  *ngFor="let star of starsArray"
+                  [class]="getStarClass(star)"
+                ></i>
+              </span>
+            </div>
+            <div class="contact-info">
+              <div class="contact-line">
+                <i class="fa-solid fa-envelope fa-lg"></i>
+                <span class="contact-text">{{ selectedMarker?.email }}</span>
+              </div>
+              <div class="contact-line">
+                <i class="fa-solid fa-phone fa-lg"></i>
+                <span class="contact-text">{{ selectedMarker?.phone }}</span>
+              </div>
+              <div class="contact-line">
+                <i class="fa-solid fa-location-dot fa-lg"></i>
+                <span class="contact-text">{{ selectedMarker?.address }}</span>
+              </div>
+
+              <a
+                class="details-link"
+                routerLink="/details/{{ selectedMarker?.id }}"
+                >Details</a
+              >
+            </div>
+            <!-- 
         <h1>{{ selectedMarker?.title }}</h1>
         <p>Category: {{ selectedMarker?.category }}</p>
         <p>Email: {{ selectedMarker?.email }}</p>
@@ -180,8 +187,10 @@
         <p>{{ selectedMarker?.description }}</p>
 
         
-        --></div>
-      </map-info-window>
-    </google-map>
+        -->
+          </div>
+        </map-info-window>
+      </google-map>
+    </div>
   </div>
 </div>

@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -52,7 +52,7 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    ReactiveFormsModule,
     GoogleMapsModule,
     HttpClientModule,
     HttpClientJsonpModule,
