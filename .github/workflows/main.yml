@@ -13,13 +13,13 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: '16.13.2'
+          node-version: '16.14'
 
       - name: Install and Build 🔧
         run: |
           npm install
           npm run build
-          cp dist/medical-tourism/index.html dist/medical-toursim/404.html
+          cp docs/medical-tourism/index.html docs/medical-toursim/404.html
           
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
