@@ -1,0 +1,62 @@
+[
+  {
+    "id": "clinic-1",
+    "name": "Stomatološka ordinacija Dr Kukoljac",
+    "type": "medical",
+    "category": "dentistry",
+    "position": { "lat": 42.45270796825601, "lng": 18.541909661364524 },
+    "description": "U prijatnoj atmosferi i potpuno bezbolno svi terapijski postupci prilagođeni su individualnim potrebama i starosnoj dobi pacijenta. Profesionalno i stručno osoblje svojim znanjem i umećem osposobljeno je da pruži najkvalitetnije usluge estetske stomatologije i popravke zuba, savladavajući sa lakoćom i najzahtevnije estetske probleme. Mi Vam nudimo kompletnu stomatološku uslugu po europskim standardima, koristimo najkvalitetnije materijale poznatih svjetskih proizvođača.",
+    "address": "Stjepa Šarenca 28",
+    "email": "drbestcg@yahoo.com",
+    "phone": "+382 68 444 601",
+    "rating": 4.3
+  },
+  {
+    "id": "clinic-2",
+    "name": "Stomatološka klinika Kovačević",
+    "type": "medical",
+    "category": "dentistry",
+    "position": { "lat": 42.46992401222082, "lng": 18.513124292451558 },
+    "description": "Privatna porodična stomatološka ordinacija “Dental Clinic Kovačević” osnovana je 1989. godine i smještena je u Herceg Novom.",
+    "address": "Sunčana obala bb",
+    "email": "officekovacevic@gmail.com",
+    "phone": "+382 69 885 005",
+    "rating": 3.6
+  },
+  {
+    "id": "clinic-3",
+    "name": "Timeless Beauty Plastic Surgery",
+    "type": "medical",
+    "category": "surgery",
+    "position": { "lat": 42.457423225965194, "lng": 18.531344411673594 },
+    "description": "For over 30 years, Dr. Borko Djordjević has dedicated his life to creating elegant, natural transformations of the face and body for his patients.Dr. Borko’s plastic surgery methods, staff, and equipment are the finest in the industry. His consultations are very detailed and comprehensive, allowing him to truly understand his patient’s goals and expectations. Dr. Borko spares nothing for his patients and provides them with great, nurturing support.It’s never too late to pursue beauty. Schedule your consultation with Dr. Borko to create the younger-looking, leaner, more graceful you.",
+    "address": "Straznik 12",
+    "email": "borkodjordjevic@timeless.com",
+    "phone": "+382 31 332 770",
+    "rating": 4.8
+  },
+  {
+    "id": "clinic-4",
+    "name": "ORL Klinika dr Barjaktarović",
+    "type": "medical",
+    "category": "surgery",
+    "position": { "lat": 42.45854413262422, "lng": 18.497576364157776 },
+    "description": "Klinika dr Barjaktarovića se nalazi u Igalu i prostire se na velicini od 150 m2. Klinika posjeduje ambulantu opremljenu za sve vrste otorinolaringoloskih pregleda i tretmana, operacionu salu za obavljanje estetske, funkcionalne, kao i funkcionalno-estetske hirurgije i drugih zahvata, bolnicku sobu za njegu pacijenata sa udobnim krevetima, kablovskom televizijom i wi-fi pristupom internetu. Prva privatna, specijalistička, ambulanta za bolesti uva, nosa i grla u Herceg Novom pruža vam sve dijagnostičke i terapijske usluge, na savremen i efikasan način. Pregledi, kompjutersko ispitivanje sluha, audiometrija, timpanometrija, odredjivanje slušnih aparata, strana tijela uva, nosa i grla, sistematski pregledi, inhalacije, ispiranje uva, incizije, obrada rana, injekcije i previjanja kao i hirurške intervencije dio su usluga koje nudi naša ambulanta. Pored ambulante, klinika nudi i usluge plastične hirurgije. Tim vrhunskih stručnjaka predvodjen dr Vukašinom Barjaktarovićem vrši estetske operacije nosa i ušnih školjki po najsavremenijim evropskim standardima. Decenije rada i iskustva, kao i hiljade zadovoljnih pacijenata garancija su našeg uspjeha i kvaliteta. Posjetite nas i uvjerite se zasto smo jedni od najboljih. ",
+    "address": "Trebinjska, Igalo",
+    "email": "vukasin@t-com.me",
+    "phone": "+382 69 047 393",
+    "rating": 2.4
+  },
+  {
+    "id": "clinic-6",
+    "name": "Klinika Life",
+    "type": "medical",
+    "category": "reproduction",
+    "position": { "lat": 42.469797389192784, "lng": 18.530118769257424 },
+    "description": "Klinika „Life“ je prva ustanova za vantjelesnu oplodnju u Crnoj Gori, koja je počela sa radom prije 18 godina. Već 2004. godine, u laboratorijskim uslovima, rodila se prva crnogorska beba iz epruvete. Sa svojim iskusnim timom, modernom opremom koju posjedujemo, odličnim uslovima i profesionalnim medicinskim osobljem, klinika „Life“ jedna je od najsavremenijih i najiskusnijih klinika u Crnoj Gori i šire.",
+    "address": "Crnogorskih Serdara 37",
+    "email": "ivf.life@gmail.com",
+    "phone": "+382 20 634 006",
+    "rating": 4.3
+  }
+]
