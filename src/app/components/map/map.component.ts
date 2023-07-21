@@ -127,7 +127,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         html: `<h1>${place.name}</h1><p>${place.rating}</p><a routerLink="/details" routerLinkActive="active">Details</a>`,
         options: {
           icon: {
-            url: "./assets/home.png",
+            url: "assets/home.png",
             scaledSize: { width: 50, height: 50 },
           },
         },
@@ -154,7 +154,7 @@ export class MapComponent implements OnInit, AfterViewInit {
           category: clinic.category,
           options: {
             icon: {
-              url: "./assets/heart.png",
+              url: "assets/heart.png",
               scaledSize: { width: 50, height: 50 },
             },
           },

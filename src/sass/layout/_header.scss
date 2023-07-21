@@ -5,7 +5,7 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../../assets/header.jpg);
+    url(assets/header.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -24,7 +24,7 @@
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)
       ),
-      url(../../assets/header.jpg);
+      url(assets/header.jpg);
   }
 
   @include respond(phone) {

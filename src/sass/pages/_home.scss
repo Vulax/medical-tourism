@@ -15,7 +15,7 @@
       rgba($color-primary-light, 0.7),
       rgba($color-primary-dark, 0.7)
     ),
-    url(../../assets/nat-4.jpg);
+    url(assets/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem;
@@ -68,7 +68,7 @@
       rgba($color-white, 0.8) 50%,
       transparent 50%
     ),
-    url(../../assets/sea-town.jpg);
+    url(assets/sea-town.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
@@ -80,7 +80,7 @@
         rgba($color-white, 0.8) 65%,
         transparent 65%
       ),
-      url(../../assets/sea-town.jpg);
+      url(assets/sea-town.jpg);
     background-size: cover;
   }
 
@@ -90,7 +90,7 @@
         rgba($color-white, 0.8) 0%,
         rgba($color-white, 0.8) 100%
       ),
-      url(../../assets/sea-town.jpg);
+      url(assets/sea-town.jpg);
   }
 
   &__form {
